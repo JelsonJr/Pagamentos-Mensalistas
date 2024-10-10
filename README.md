@@ -39,6 +39,7 @@
         -   Requisição completa: `GET http://localhost:8080/jogadores/{codJogador}`
         -   Respostas:
             -   `200 OK`: Jogador encontrado.
+            -   `400 BAD REQUEST`: Erro na requisição.
             -   `404 NOT FOUND`: Jogador não encontrado.
             -   `500 INTERNAL SERVER ERROR`: Erro interno do servidor.
 
@@ -49,6 +50,7 @@
         -   Requisição completa: `GET http://localhost:8080/jogadores/{codJogador}/pagamentos`
         -   Respostas:
             -   `200 OK`: Jogador e lista de pagamentos (mesmo que vazia) são retornados com sucesso.
+            -   `400 BAD REQUEST`: Erro na requisição.
             -   `404 NOT FOUND`: Jogador não encontrado.
             -   `500 INTERNAL SERVER ERROR`: Erro interno do servidor.
 
@@ -66,7 +68,7 @@
         -   Requisição completa: `POST http://localhost:8080/jogadores/`
         -   Respostas:
             -   `201 CREATED`: Jogador criado com sucesso.
-            -   `400 BAD_REQUEST`: Erro na requisição.
+            -   `400 BAD REQUEST`: Erro na requisição.
             -   `500 INTERNAL SERVER ERROR`: Erro interno do servidor.
 
     -   **PUT** `/{codJogador}`:
@@ -84,8 +86,8 @@
         -   Requisição completa: `PUT http://localhost:8080/jogadores/{codJogador}`
         -   Respostas:
             -   `200 OK`: Jogador atualizado com sucesso.
+            -   `400 BAD REQUEST`: Erro na requisição.
             -   `404 NOT FOUND`: Jogador não encontrado.
-            -   `400 BAD_REQUEST`: Erro na requisição.
             -   `500 INTERNAL SERVER ERROR`: Erro interno do servidor.
 
     -   **DELETE** `/{codJogador}`:
@@ -94,6 +96,7 @@
         -   Requisição completa: `DELETE http://localhost:8080/jogadores/{codJogador}`
         -   Respostas:
             -   `204 NO CONTENT`: Jogador deletado com sucesso.
+            -   `400 BAD REQUEST`: Erro na requisição.
             -   `404 NOT FOUND`: Jogador não encontrado.
             -   `500 INTERNAL SERVER ERROR`: Erro interno do servidor.
 
@@ -116,6 +119,7 @@
         -   Requisição completa: `GET http://localhost:8080/pagamentos/{codPagamento}`
         -   Respostas:
             -   `200 OK`: Pagamento encontrado.
+            -   `400 BAD REQUEST`: Erro na requisição.
             -   `404 NOT FOUND`: Pagamento não encontrado.
             -   `500 INTERNAL SERVER ERROR`: Erro interno do servidor.
 
@@ -135,7 +139,7 @@
     -   Respostas:
 
         -   `201 CREATED`: Pagamento criado com sucesso.
-        -   `400 BAD REQUEST`: Dados do jogador inválidos ou incompletos.
+        -   `400 BAD REQUEST`: Erro na requisição.
         -   `404 NOT FOUND`: Jogador não encontrado.
         -   `500 INTERNAL SERVER ERROR`: Erro interno do servidor.
 
@@ -155,6 +159,7 @@
         -   Requisição completa: `PUT http://localhost:8080/pagamentos/{codPagamento}`
         -   Respostas:
             -   `200 OK`: Pagamento atualizado com sucesso.
+            -   `400 BAD REQUEST`: Erro na requisição.
             -   `404 NOT FOUND`: Pagamento ou jogador não encontrado.
             -   `500 INTERNAL SERVER ERROR`: Erro interno do servidor.
 
@@ -164,6 +169,7 @@
         -   Requisição completa: `DELETE http://localhost:8080/pagamentos/`
         -   Respostas:
             -   `204 NO CONTENT`: Todos os pagamentos deletados com sucesso.
+            -   `400 BAD REQUEST`: Erro na requisição.
             -   `500 INTERNAL SERVER ERROR`: Erro interno do servidor.
 
     -   **DELETE** `/{codPagamento}`
@@ -173,5 +179,6 @@
         -   Requisição completa: `DELETE http://localhost:8080/pagamentos/{codPagamento}`
         -   Respostas:
             -   `204 NO CONTENT`: Pagamento deletado com sucesso.
+            -   `400 BAD REQUEST`: Erro na requisição.
             -   `404 NOT FOUND`: Pagamento não encontrado.
             -   `500 INTERNAL SERVER ERROR`: Erro interno do servidor.
